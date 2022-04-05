@@ -6,7 +6,7 @@ services:
     working_dir: /app
     command: "npm run start"
     volumes:
-      - ./project-react-pokemon:/app
+      - ./gui:/app
     ports:
       - 3000:3000
     depends_on:
@@ -16,8 +16,8 @@ services:
     build: ./project-practice-laravelLumen
     working_dir: /var/www/
     volumes:
-      - ./project-practice-laravelLumen:/var/www/
-      - ./project-practice-laravelLumen/public/:/var/www/html/
+      - ./api:/var/www/
+      - ./api/:/var/www/html/
     ports:
       - 8000:80
     depends_on:
